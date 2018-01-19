@@ -6,4 +6,8 @@ public class BaseCharacterClass : MonoBehaviour
 {
     protected int characterHealth;
     protected int characterDamage;
+    protected int enemyDamage;
+    protected bool takeDamage;
+
+    public GameObject deathMessage;
 }
