@@ -9,14 +9,7 @@ public class TPForest : MonoBehaviour {
     {
         if(col.tag == "Forest")
         {
-            if (Input.GetKey(KeyCode.Y))
-            {
-                SceneManager.LoadScene("ForestScene_2.2");
-            }
-            if (Input.GetKey(KeyCode.N))
-            {
-
-            }
+            SceneManager.LoadScene("ForestScene_2.2");
         }
     }
 }

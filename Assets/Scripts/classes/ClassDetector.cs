@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ClassDetector : BaseCharacterClass
 {
+    public GameObject DeathMessage;
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseCharacterClass : MonoBehaviour
 {
-    protected int characterHealth;
+    public int characterHealth =100;
     protected int characterDamage;
     protected int enemyDamage;
     protected bool takeDamage;
