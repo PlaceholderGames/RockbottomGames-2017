@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: d027af1092f6b434090f040565e7e656
+guid: c17b912cb35dda24093ec57ab8944396
 SpeedTreeImporter:
   serializedVersion: 4
   mainColor: {r: 1, g: 1, b: 1, a: 1}
-  specColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
-  shininess: 0.125
   alphaTestRef: 0.33
   bestWindQuality: 5
   hasBillboard: 1
