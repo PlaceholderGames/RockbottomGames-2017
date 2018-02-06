@@ -12,7 +12,7 @@ public class InputDetector : MonoBehaviour
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;
-    bool war_col, thief_col, mage_col;
+    bool war_col, thief_col, mage_col, npc_col;
 
     void Start()
     {
@@ -21,6 +21,7 @@ public class InputDetector : MonoBehaviour
         war_col = false;
         thief_col = false;
         mage_col = false;
+        npc_col = true;
     }
     void Update()
     {
@@ -85,6 +86,10 @@ public class InputDetector : MonoBehaviour
         else if (col.tag == "Mage")
         {
             mage_col = true;
+        }
+        else if (col.tag == "NPC")
+        {
+            npc_col = true;
         }
         else
         {
