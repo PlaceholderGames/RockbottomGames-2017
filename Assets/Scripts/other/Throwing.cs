@@ -5,7 +5,11 @@ using UnityEngine;
 public class Throwing : MonoBehaviour {
 
     public GameObject prefab;
+    public GameObject Hatchet;
+    public GameObject Fireball;
+    public GameObject Dagger;
     public Transform cameraPos;
+    public Transform axe;
     public Transform pause;
 
     private bool enter = false;
@@ -27,7 +31,7 @@ public class Throwing : MonoBehaviour {
             if (enter == false)
             {
                 GameObject projectile = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
-                projectile.transform.position = transform.position + cameraPos.transform.forward * spawn;
+                projectile.transform.position = axe.transform.position + cameraPos.transform.forward * spawn;
                 Rigidbody rb = projectile.GetComponent<Rigidbody>();
                 rb.velocity = cameraPos.transform.forward * force;
                 StartCoroutine(timer());

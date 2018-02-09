@@ -1,13 +1,12 @@
 using UnityEngine;
-using System.Collections;
 using UnityEditor;
+using UnityEditor.Animations;
 
 public class ShowAnimation : MonoBehaviour {
 
 	public GameObject [] AinObjs;
 	private int CurAinObjCount =0;
-	//public GameObject AinObj;
-	private Animation ain;
+	public GameObject ain;
 	public AnimationClip [] clips;
 	public int CurAnimClip =0;
 	public string CurAnimName;
@@ -66,7 +65,7 @@ public class ShowAnimation : MonoBehaviour {
 	
 	void AddAnim () 
 	{
-		ain = AinObjs [i].GetComponent<Animation>();
+		ain = AinObjs [i].GetComponent<GameObject>();
 		clips = AnimationUtility.GetAnimationClips(ain);
 	}
 	void PlayAnim ()
