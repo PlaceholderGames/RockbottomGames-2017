@@ -28,7 +28,6 @@ public class InputDetector : MonoBehaviour
         if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
         {
             pause = true;
-            Cursor.visible = true;
         }
 
         if (pause == true)
@@ -100,7 +99,6 @@ public class InputDetector : MonoBehaviour
     public void ResumeButton()
     {
         pause = false;
-        Cursor.visible = false;
     }
 
     public void ExitButton()

@@ -20,7 +20,7 @@ public class DragonHealth : MonoBehaviour {
 
     void Awake()
     {
-        healthBar = GameObject.Find("Dragon Health Bar").GetComponent<HealthBarControl>();
+        healthBar = GameObject.Find("DragonHealthBar").GetComponent<HealthBarControl>();
     }
 
     void Update()
