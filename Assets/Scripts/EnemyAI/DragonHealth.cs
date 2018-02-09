@@ -18,10 +18,11 @@ public class DragonHealth : MonoBehaviour {
 
     }
 
-    void Awake()
+ /*   void Awake()
     {
         healthBar = GameObject.Find("Dragon Health Bar").GetComponent<HealthBarControl>();
     }
+    */
 
     void Update()
     {   //checks if play is dead.

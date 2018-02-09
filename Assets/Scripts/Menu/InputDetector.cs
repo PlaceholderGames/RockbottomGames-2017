@@ -12,7 +12,9 @@ public class InputDetector : MonoBehaviour
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;
-    bool war_col, thief_col, mage_col, npc_col;
+    public GameObject NPC;
+    public GameObject Interact;
+    public bool war_col, thief_col, mage_col, npc_col;
 
     void Start()
     {
@@ -21,16 +23,23 @@ public class InputDetector : MonoBehaviour
         war_col = false;
         thief_col = false;
         mage_col = false;
-        npc_col = true;
+        npc_col = false;
     }
     void Update()
     {
+        if(collide == true)
+        {
+            Interact.SetActive(true);
+        }
+        else
+        {
+            Interact.SetActive(false);
+        }
         if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
         {
             pause = true;
             Cursor.visible = true;
         }
-
         if (pause == true)
         {
             Time.timeScale = 0;
@@ -39,9 +48,11 @@ public class InputDetector : MonoBehaviour
             if (Input.GetKeyDown("escape"))
             {
                 canvas.SetActive(true);
+                Interact.SetActive(false);
             }
             else
             {
+                Interact.SetActive(false);
                 if (war_col)
                 {
                     WarriorDescription.SetActive(true);
@@ -57,6 +68,11 @@ public class InputDetector : MonoBehaviour
                     MageDescription.SetActive(true);
                     mage_col = false;
                 }
+                if(npc_col)
+                {
+                    NPC.SetActive(true);
+                    npc_col = false;
+                }
             }
         }
 
@@ -66,9 +82,7 @@ public class InputDetector : MonoBehaviour
             canvas.SetActive(false);
             cameraMove.GetComponent<camera>().cameraActive = true;
             GetComponent<camera>().cameraActive = true;
-
         }
-
     }
 
 
@@ -94,6 +108,10 @@ public class InputDetector : MonoBehaviour
         else
         {
             collide = false;
+            war_col = false;
+            thief_col = false;
+            mage_col = false;
+            npc_col = false;
         }
     }
 
@@ -101,6 +119,7 @@ public class InputDetector : MonoBehaviour
     {
         pause = false;
         Cursor.visible = false;
+
     }
 
     public void ExitButton()
