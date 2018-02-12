@@ -9,10 +9,10 @@ public class InputDetector : MonoBehaviour
     public bool collide;
     public GameObject canvas;
     public Transform cameraMove;
-    public GameObject WarriorDescription;
-    public GameObject ThiefDescription;
-    public GameObject MageDescription;
-    bool war_col, thief_col, mage_col, npc_col;
+    //public GameObject WarriorDescription;
+    //public GameObject ThiefDescription;
+    //public GameObject MageDescription;
+    public bool war_col, thief_col, mage_col, npc_col;
 
     void Start()
     {
@@ -43,17 +43,17 @@ public class InputDetector : MonoBehaviour
             {
                 if (war_col)
                 {
-                    WarriorDescription.SetActive(true);
+                    //WarriorDescription.SetActive(true);
                     war_col = false;
                 }
                 if (thief_col)
                 {
-                    ThiefDescription.SetActive(true);
+                    //ThiefDescription.SetActive(true);
                     thief_col = false;
                 }
                 if (mage_col)
                 {
-                    MageDescription.SetActive(true);
+                    //MageDescription.SetActive(true);
                     mage_col = false;
                 }
             }
