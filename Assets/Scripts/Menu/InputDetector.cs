@@ -9,11 +9,17 @@ public class InputDetector : MonoBehaviour
     public bool collide;
     public GameObject canvas;
     public Transform cameraMove;
+<<<<<<< HEAD
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;
     public GameObject NPC;
     public GameObject Interaction;
+=======
+    //public GameObject WarriorDescription;
+    //public GameObject ThiefDescription;
+    //public GameObject MageDescription;
+>>>>>>> new-Josh
     public bool war_col, thief_col, mage_col, npc_col;
 
     void Start()
@@ -32,7 +38,6 @@ public class InputDetector : MonoBehaviour
         if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
         {
             pause = true;
-            Cursor.visible = true;
         }
 
         if (pause == true)
@@ -50,17 +55,17 @@ public class InputDetector : MonoBehaviour
                 Interaction.SetActive(false);
                 if (war_col)
                 {
-                    WarriorDescription.SetActive(true);
+                    //WarriorDescription.SetActive(true);
                     war_col = false;
                 }
                 if (thief_col)
                 {
-                    ThiefDescription.SetActive(true);
+                    //ThiefDescription.SetActive(true);
                     thief_col = false;
                 }
                 if (mage_col)
                 {
-                    MageDescription.SetActive(true);
+                    //MageDescription.SetActive(true);
                     mage_col = false;
                 }
                 if(npc_col)
@@ -114,7 +119,6 @@ public class InputDetector : MonoBehaviour
     public void ResumeButton()
     {
         pause = false;
-        Cursor.visible = false;
     }
 
     public void ExitButton()
