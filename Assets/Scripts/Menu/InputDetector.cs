@@ -12,7 +12,9 @@ public class InputDetector : MonoBehaviour
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;
-    bool war_col, thief_col, mage_col, npc_col;
+    public GameObject NPC;
+    public GameObject Interaction;
+    public bool war_col, thief_col, mage_col, npc_col;
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class InputDetector : MonoBehaviour
     }
     void Update()
     {
+        if (collide == true) { Interaction.SetActive(true); }
+        else { Interaction.SetActive(false); }
         if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
         {
             pause = true;
@@ -39,9 +43,11 @@ public class InputDetector : MonoBehaviour
             if (Input.GetKeyDown("escape"))
             {
                 canvas.SetActive(true);
+                Interaction.SetActive(false);
             }
             else
             {
+                Interaction.SetActive(false);
                 if (war_col)
                 {
                     WarriorDescription.SetActive(true);
@@ -57,6 +63,11 @@ public class InputDetector : MonoBehaviour
                     MageDescription.SetActive(true);
                     mage_col = false;
                 }
+                if(npc_col)
+                {
+                    NPC.SetActive(true);
+                    npc_col = false;
+                }
             }
         }
 
@@ -66,7 +77,6 @@ public class InputDetector : MonoBehaviour
             canvas.SetActive(false);
             cameraMove.GetComponent<camera>().cameraActive = true;
             GetComponent<camera>().cameraActive = true;
-
         }
 
     }
@@ -94,6 +104,10 @@ public class InputDetector : MonoBehaviour
         else
         {
             collide = false;
+            war_col = false;
+            thief_col = false;
+            mage_col = false;
+            npc_col = false;
         }
     }
 

@@ -21,7 +21,6 @@ public class Throwing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
         if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
         {
             if (enter == false)
