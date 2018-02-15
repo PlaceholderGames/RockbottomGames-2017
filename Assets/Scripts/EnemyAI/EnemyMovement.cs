@@ -9,21 +9,25 @@ public class EnemyMovement : MonoBehaviour
     public Transform self;
     NavMeshAgent agent;
     bool aggro = false;
+    public Vector3 defaultPosition;
 
-	void Start ()
+	void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = transform.parent.GetComponent<NavMeshAgent>();
+        defaultPosition = transform.position;
 	}
 	
-	void Update ()
+	void Update()
     {
         if (aggro == true)
         {
             agent.SetDestination(target.position);
+            Debug.Log("Aggro = True");
         }
         else
         {
-            agent.SetDestination(self.position);
+            agent.SetDestination(defaultPosition);
+            Debug.Log("Aggro = False");
         }
 	}
 

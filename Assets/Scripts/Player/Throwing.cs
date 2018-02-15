@@ -15,12 +15,13 @@ public class Throwing : MonoBehaviour {
     private float spawn = 1f;
     private float force = 40f; 
 
-    void Start () {
+    void Start ()
+    {
         //prefab = Resources.Load("projectile") as GameObject;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         
         if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
         {
@@ -30,7 +31,8 @@ public class Throwing : MonoBehaviour {
                 projectile.transform.position = transform.position + cameraPos.transform.forward * spawn;
                 Rigidbody rb = projectile.GetComponent<Rigidbody>();
                 rb.velocity = cameraPos.transform.forward * force;
-                StartCoroutine(timer());
+                //StartCoroutine(timer());  
+                Destroy(projectile, 2f);
             }
         }
 	}
