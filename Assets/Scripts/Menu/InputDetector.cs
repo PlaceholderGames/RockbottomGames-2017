@@ -9,17 +9,13 @@ public class InputDetector : MonoBehaviour
     public bool collide;
     public GameObject canvas;
     public Transform cameraMove;
-<<<<<<< HEAD
+
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;
     public GameObject NPC;
     public GameObject Interaction;
-=======
-    //public GameObject WarriorDescription;
-    //public GameObject ThiefDescription;
-    //public GameObject MageDescription;
->>>>>>> new-Josh
+
     public bool war_col, thief_col, mage_col, npc_col;
 
     void Start()

@@ -32,14 +32,11 @@ public class Throwing : MonoBehaviour {
     }
   
 	// Update is called once per frame
-<<<<<<< HEAD
-	void Update () {
-        if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
-=======
+
 	void Update ()
     {
         if (weaponEnabled == true)
->>>>>>> new-Josh
+
         {
             if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
             {
