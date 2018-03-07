@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : BaseCharacterClass
+public class PlayerHealth : MonoBehaviour
 {
     private bool enter = false;
     private float delay = 0.2f;
     private HealthBarControl healthBar;
+    public Transform char_health;
+    public int characterHealth;
+    protected static int characterDamage;
+    protected int enemyDamage;
+    protected bool takeDamage;
+
+    public GameObject deathMessage;
 
     void Start ()
     {
-        characterHealth = 100;
+        GameObject thePlayer = GameObject.Find("ThePlayer");
+        ClassSetup playerClass = thePlayer.GetComponent<ClassSetup>();   
+        characterHealth = playerClass.health; 
         characterDamage = 1;
         enemyDamage = 10;
-
     }
 
     void Awake()
@@ -22,12 +30,14 @@ public class PlayerHealth : BaseCharacterClass
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarControl>();
     }
 
-	void Update ()
-    {   //checks if play is dead.
-		if (characterHealth <= 0)
-        {
-            deathMessage.SetActive(true);
-        }
+	void Update ()     
+    {
+        Debug.Log(characterHealth);
+        //checks if play is dead.
+         if (characterHealth <= 0)
+          {
+                deathMessage.SetActive(true);
+          }
 
         if (takeDamage == true) //checks if damage bool is active. 
         {
@@ -56,5 +66,10 @@ public class PlayerHealth : BaseCharacterClass
         {
             takeDamage = true; 
         }
+    }
+
+    public void SetHealth()
+    {
+        characterHealth = characterHealth;
     }
 }

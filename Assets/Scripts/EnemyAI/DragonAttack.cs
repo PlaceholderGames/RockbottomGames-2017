@@ -18,13 +18,13 @@ public class DragonAttack : MonoBehaviour
     public int attackDamage = 10;////////
     Rigidbody fireballRB;
 
-    BaseCharacterClass baseCharacterClass;
+    PlayerHealth baseCharacterClass;
 
     // Use this for initialization
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        baseCharacterClass = player.GetComponent<BaseCharacterClass>();
+        baseCharacterClass = player.GetComponent<PlayerHealth>();
 
         //timer//////////////////////////
         timer += Time.deltaTime;

@@ -28,7 +28,7 @@ public class DragonHealth : MonoBehaviour {
     {   //checks if play is dead.
         if (dragonHealth <= 0)
         {
-            
+            Debug.Log("u ded");
         }
 
         if (takeDamage == true) //checks if damage bool is active. 
