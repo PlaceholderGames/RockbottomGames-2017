@@ -8,6 +8,8 @@ public class PlayerHealth : BaseCharacterClass
     private bool enter = false;
     private float delay = 0.2f;
     private HealthBarControl healthBar;
+    public GameObject deathWindow;
+    public Transform cameraMove;
 
     void Start ()
     {
@@ -26,7 +28,9 @@ public class PlayerHealth : BaseCharacterClass
     {   //checks if play is dead.
 		if (characterHealth <= 0)
         {
-            deathMessage.SetActive(true);
+            cameraMove.GetComponent<camera>().cameraActive = false;
+            Cursor.visible = true;
+            deathWindow.SetActive(true);
         }
 
         if (takeDamage == true) //checks if damage bool is active. 
