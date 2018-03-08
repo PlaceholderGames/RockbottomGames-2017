@@ -6,16 +6,14 @@ using UnityEngine.SceneManagement;
 public class InputDetector : MonoBehaviour
 {
     public bool pause;
-    public bool collide;
+    bool collide;
     public GameObject canvas;
     public Transform cameraMove;
-
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;
     public GameObject NPC;
-    public GameObject Interaction;
-
+    public GameObject Interact;
     public bool war_col, thief_col, mage_col, npc_col;
 
     void Start()
@@ -25,17 +23,22 @@ public class InputDetector : MonoBehaviour
         war_col = false;
         thief_col = false;
         mage_col = false;
-        npc_col = true;
+        npc_col = false;
     }
     void Update()
     {
-        if (collide == true) { Interaction.SetActive(true); }
-        else { Interaction.SetActive(false); }
-        if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
+        if(collide == true)
+        {
+            Interact.SetActive(true);
+        }
+        else
+        {
+            Interact.SetActive(false);
+        }
+       if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
         {
             pause = true;
         }
-
         if (pause == true)
         {
             Time.timeScale = 0;
@@ -44,24 +47,24 @@ public class InputDetector : MonoBehaviour
             if (Input.GetKeyDown("escape"))
             {
                 canvas.SetActive(true);
-                Interaction.SetActive(false);
+                Interact.SetActive(false);
             }
             else
             {
-                Interaction.SetActive(false);
+                Interact.SetActive(false);
                 if (war_col)
                 {
-                    //WarriorDescription.SetActive(true);
+                    WarriorDescription.SetActive(true);
                     war_col = false;
                 }
                 if (thief_col)
                 {
-                    //ThiefDescription.SetActive(true);
+                    ThiefDescription.SetActive(true);
                     thief_col = false;
                 }
                 if (mage_col)
                 {
-                    //MageDescription.SetActive(true);
+                    MageDescription.SetActive(true);
                     mage_col = false;
                 }
                 if(npc_col)
@@ -79,8 +82,9 @@ public class InputDetector : MonoBehaviour
             cameraMove.GetComponent<camera>().cameraActive = true;
             GetComponent<camera>().cameraActive = true;
         }
-
+        
     }
+    
 
 
     void OnTriggerEnter(Collider col)

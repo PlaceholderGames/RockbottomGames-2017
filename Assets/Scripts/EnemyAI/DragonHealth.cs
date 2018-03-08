@@ -35,7 +35,7 @@ public class DragonHealth : MonoBehaviour {
             if (enter == false) //check is the time delay is deactivated.
             {
                 dragonHealth = dragonHealth - enemyDamage; // dealts the damage.
-                healthBar.changeHp(enemyDamage); //cheack the Ui health bar to reflect the damage taken. 
+                //healthBar.changeHp(enemyDamage); //cheack the Ui health bar to reflect the damage taken. 
                 StartCoroutine(timer()); // starts the timer
                 takeDamage = false;// sets the damage bool to false. ready for next damage.
             }

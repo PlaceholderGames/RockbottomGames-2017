@@ -5,7 +5,7 @@ using UnityEngine;
 public class Throwing : MonoBehaviour {
 
     private GameObject prefab;
-    public GameObject WarriorWeapon;
+    private GameObject WarriorWeapon;
     private GameObject ThiefWeapon;
     private GameObject MageWeapon;
     public GameObject Hatchet;
@@ -41,7 +41,7 @@ public class Throwing : MonoBehaviour {
             if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
             {
                 throwing();
-                //weaponSelection();
+                weaponSelection();
             }
         }
 	}
@@ -50,7 +50,7 @@ public class Throwing : MonoBehaviour {
     {
         if (enter == false)
         {
-            GameObject projectile = Instantiate(WarriorWeapon, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
+            GameObject projectile = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
             projectile.transform.position = weapon.transform.position + cameraPos.transform.forward;
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = cameraPos.transform.forward * force;
@@ -58,9 +58,9 @@ public class Throwing : MonoBehaviour {
         }
     }
 
-    void weaponSelection()
+  void weaponSelection()
     {
-        //WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
+        WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
 
 
         if (classChecker.war_col == true)
@@ -78,6 +78,7 @@ public class Throwing : MonoBehaviour {
             prefab = Fireball;
         }
     }
+    
     IEnumerator timer()
     {
         enter = true;
