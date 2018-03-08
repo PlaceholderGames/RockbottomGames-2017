@@ -6,28 +6,21 @@ using UnityEngine.UI;
 
 public class HealthBarControl : MonoBehaviour
 {
-    public Transform char_health;
-    private Slider healthBar;
-    public int currentHealth;
-
-    GameObject thePlayer = GameObject.Find("ThePlayer");
-    ClassSetup playerClass = thePlayer.GetComponent<ClassSetup>();
+    public Slider healthBar;
 
     void Awake()
     {
-        healthBar = GetComponent<Slider>();
-        currentHealth = ClassSetup.health;
-        healthBar.maxValue = currentHealth;
+        healthBar.maxValue = PlayerHealth.baseHealth;
+        healthBar.value = PlayerHealth.characterHealth;
     }
 
     // Update is called once per frame
     void Update()
-    {     
-        healthBar.value = currentHealth;
+    {
+        healthBar.maxValue = PlayerHealth.baseHealth;
+        healthBar.value = PlayerHealth.characterHealth;
     }
 
-    public void changeHp(int Damage)
-    {
-        currentHealth -= Damage;
-    }
+
 }
+

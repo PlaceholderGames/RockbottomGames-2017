@@ -47,7 +47,7 @@ public class DragonAttack : MonoBehaviour
         //Attack Function
         timer = 0f;     //resets timer.
         transform.LookAt(lastPos.transform.position);
-        if (baseCharacterClass.characterHealth > 0)
+        if (PlayerHealth.characterHealth > 0)
         {
             GameObject fireballInstance = Instantiate(fireballPrefab) as GameObject;
             fireballInstance.transform.position = transform.position;
