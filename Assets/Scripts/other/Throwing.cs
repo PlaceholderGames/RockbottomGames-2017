@@ -28,7 +28,7 @@ public class Throwing : MonoBehaviour {
 
     void Awake()
     {
-        weaponEnabled = false;
+        weaponEnabled = true;
     }
   
 	// Update is called once per frame
@@ -41,7 +41,7 @@ public class Throwing : MonoBehaviour {
             if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
             {
                 throwing();
-                weaponSelection();
+                //weaponSelection();
             }
         }
 	}
@@ -50,17 +50,17 @@ public class Throwing : MonoBehaviour {
     {
         if (enter == false)
         {
-            GameObject projectile = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
+            GameObject projectile = Instantiate(WarriorWeapon, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
             projectile.transform.position = weapon.transform.position + cameraPos.transform.forward;
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = cameraPos.transform.forward * force;
-            StartCoroutine(timer());
+            //StartCoroutine(timer());
         }
     }
 
     void weaponSelection()
     {
-        WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
+        //WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
 
 
         if (classChecker.war_col == true)
