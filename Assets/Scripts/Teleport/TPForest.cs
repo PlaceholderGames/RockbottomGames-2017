@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TPForest : MonoBehaviour {
 
-	void OnTriggerEnter(Collider col)
+	public void respawn ()
     {
-        if(col.tag == "Forest")
-        {
-            SceneManager.LoadScene("ForestScene_2.2");
-        }
+        SceneManager.LoadScene("ForestScene_2.2");
     }
 }
