@@ -2,30 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClassSetup : MonoBehaviour
+public class ClassSetup : BaseCharacterClass
 {
     // Use this for initialization
     void Start()
     {
-        PlayerHealth.baseHealth = 10;
-        PlayerHealth.characterHealth = 10;
+        baseHealth = 10;
+        characterHealth = 10;
     }
 
     public void SetMage()
     {
-        PlayerHealth.baseHealth = 90;
-        PlayerHealth.characterHealth = 90;
+        baseHealth = 90;
+        characterHealth = 90;
     }
 
     public void SetThief()
     {
-        PlayerHealth.baseHealth = 100;
-        PlayerHealth.characterHealth = 100;
+        baseHealth = 100;
+        characterHealth = 100;
     }
 
     public void SetWarrior()
     {
-        PlayerHealth.baseHealth = 120;
-        PlayerHealth.characterHealth = 120;
+        baseHealth = 120;
+        characterHealth = 120;
     }
 }

@@ -4,21 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class HealthBarControl : MonoBehaviour
+public class HealthBarControl : BaseCharacterClass
 {
     public Slider healthBar;
 
     void Awake()
     {
-        healthBar.maxValue = PlayerHealth.baseHealth;   
-        healthBar.value = PlayerHealth.characterHealth;
+        healthBar.maxValue = baseHealth;   
+        healthBar.value = characterHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.maxValue = PlayerHealth.baseHealth;
-        healthBar.value = PlayerHealth.characterHealth;
+        healthBar.maxValue = baseHealth;
+        healthBar.value = characterHealth;
     }
 
 

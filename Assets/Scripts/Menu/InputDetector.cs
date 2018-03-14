@@ -80,13 +80,11 @@ public class InputDetector : MonoBehaviour
             Time.timeScale = 1;
             canvas.SetActive(false);
             cameraMove.GetComponent<camera>().cameraActive = true;
-            GetComponent<camera>().cameraActive = true;
+          GetComponent<camera>().cameraActive = true;
         }
         
     }
     
-
-
     void OnTriggerEnter(Collider col)
     {
         collide = true;
