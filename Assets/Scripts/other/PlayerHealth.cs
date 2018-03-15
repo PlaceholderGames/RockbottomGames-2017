@@ -25,6 +25,8 @@ public class PlayerHealth : MonoBehaviour
         //checks if play is dead.
         if (characterHealth <= 0)
         {
+            characterHealth = 0;
+            InputDetector.pause = true;
             deathMessage.SetActive(true);
         }
         if (takeDamage == true) //checks if damage bool is active. 

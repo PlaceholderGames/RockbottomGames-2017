@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragonAttack : MonoBehaviour
+public class DragonAttack : BaseCharacterClass
 {
     public GameObject player;
     public float timeBetweenAttacks = 1f;
@@ -15,18 +15,17 @@ public class DragonAttack : MonoBehaviour
     //Fireball
     public GameObject fireballPrefab;
     public float force = 60f;
-    public int attackDamage = 10;////////
+    
     Rigidbody fireballRB;
 
- //   BaseCharacterClass baseCharacterClass;
 
     // Use this for initialization
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-    //    baseCharacterClass = player.GetComponent<BaseCharacterClass>();
+        //baseCharacterClass = player.GetComponent<BaseCharacterClass>();
 
-        //timer//////////////////////////
+        //timer//
         timer += Time.deltaTime;
         playerDirection = (player.transform.position - transform.position); //Distance between Dragon and player
 
@@ -47,14 +46,12 @@ public class DragonAttack : MonoBehaviour
         //Attack Function
         timer = 0f;     //resets timer.
         transform.LookAt(lastPos.transform.position);
- /*       if (baseCharacterClass.characterHealth > 0)
+        if (characterHealth > 0)
         {
             GameObject fireballInstance = Instantiate(fireballPrefab) as GameObject;
             fireballInstance.transform.position = transform.position;
             Rigidbody rb = fireballInstance.GetComponent<Rigidbody>();
-            rb.velocity = transform.forward * force;
-            }
-            */
-        
+            rb.velocity = transform.forward * force;          
+        }
     }
 }
