@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TPForest : MonoBehaviour {
+public class TPMenu : MonoBehaviour {
 
-	public void respawn ()
+	public void loadMenu()
     {
-        SceneManager.LoadScene("ForestScene_2.2");
+        SceneManager.LoadScene("Menu");
     }
 }
