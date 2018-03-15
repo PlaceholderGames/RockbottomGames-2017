@@ -21,6 +21,5 @@ public class HealthBarControl : MonoBehaviour
         healthBar.value = PlayerHealth.characterHealth;
     }
 
-
 }
 

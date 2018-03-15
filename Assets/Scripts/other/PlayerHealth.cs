@@ -15,6 +15,10 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject deathMessage;
 
+    private void Start()
+    {
+        enemyDamage = 10;
+    }
     void Update()
     {
         Debug.Log(characterHealth);
@@ -23,15 +27,15 @@ public class PlayerHealth : MonoBehaviour
         {
             deathMessage.SetActive(true);
         }
- //       if (takeDamage == true) //checks if damage bool is active. 
-  //      {
+        if (takeDamage == true) //checks if damage bool is active. 
+        {
             if (enter == false) //check is the time delay is deactivated.
             {
                 characterHealth = characterHealth - enemyDamage; // dealts the damage.
                 StartCoroutine(timer()); // starts the timer
                 takeDamage = false;// sets the damage bool to false. ready for next damage.
             }
-  //      }
+        }
 
     }
     //Timer to give a grace period for the damage. 
