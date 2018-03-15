@@ -2,30 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Boundary
-{
-    public float xMin, xMax, zMin, zMax;
-}
-
 public class Movement : MonoBehaviour {
 
     private float speed = 10.0f;
     private float walkSpeed = 10.0f;
     private float runSpeed = 25.0f;
-    private float gravity = 10f;
+    private float gravity = 20f;
     public float maxVelocityChange = 10.0f;
     float jumpHeight = 2.0f;
     public Rigidbody rb;
-    public Boundary boundary;
-
+   
     bool jump = true;
     bool grounded = false;
-
-    // Use this for initialization
-    void Start () {
-        //charCont = GetComponent<CharacterController>();
-	}
 
     void Awake()
     {

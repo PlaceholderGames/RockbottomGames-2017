@@ -5,121 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class InputDetector : MonoBehaviour
 {
-    public bool pause;
-    public bool collide;
-    public GameObject canvas;
+    public static bool pause;
+    public static bool collide;
+    public GameObject pauseMenu;
     public Transform cameraMove;
-
-    public GameObject WarriorDescription;
-    public GameObject ThiefDescription;
-    public GameObject MageDescription;
-    public GameObject NPC;
-    public GameObject Interaction;
-
-    public bool war_col, thief_col, mage_col, npc_col;
+    public GameObject Interact;
 
     void Start()
     {
         pause = false;
         collide = false;
-        war_col = false;
-        thief_col = false;
-        mage_col = false;
-        npc_col = true;
     }
     void Update()
     {
-        if (collide == true) { Interaction.SetActive(true); }
-        else { Interaction.SetActive(false); }
-        if ((Input.GetKeyDown("escape")) || (Input.GetKeyDown("e") && collide == true))
+        if(collide == true)
         {
-            pause = true;
+            Interact.SetActive(true);
+        }
+        else
+        {
+            Interact.SetActive(false);
+        }
+
+        if (Input.GetKeyDown("escape"))
+        {
+            pause = true;         
         }
 
         if (pause == true)
         {
+            Cursor.visible = true;
             Time.timeScale = 0;
             cameraMove.GetComponent<camera>().cameraActive = false;
             GetComponent<camera>().cameraActive = false;
             if (Input.GetKeyDown("escape"))
             {
-                canvas.SetActive(true);
-                Interaction.SetActive(false);
+                pauseMenu.SetActive(true);
+                Interact.SetActive(false);
             }
             else
             {
-                Interaction.SetActive(false);
-                if (war_col)
-                {
-                    //WarriorDescription.SetActive(true);
-                    war_col = false;
-                }
-                if (thief_col)
-                {
-                    //ThiefDescription.SetActive(true);
-                    thief_col = false;
-                }
-                if (mage_col)
-                {
-                    //MageDescription.SetActive(true);
-                    mage_col = false;
-                }
-                if(npc_col)
-                {
-                    NPC.SetActive(true);
-                    npc_col = false;
-                }
+                Interact.SetActive(false);
             }
         }
 
         else if (pause == false)
         {
             Time.timeScale = 1;
-            canvas.SetActive(false);
             cameraMove.GetComponent<camera>().cameraActive = true;
             GetComponent<camera>().cameraActive = true;
         }
-
     }
-
-
-    void OnTriggerEnter(Collider col)
-    {
-        collide = true;
-        if (col.tag == "Warrior")
-        {
-            war_col = true;
-        }
-        else if (col.tag == "Thief")
-        {
-            thief_col = true;
-        }
-        else if (col.tag == "Mage")
-        {
-            mage_col = true;
-        }
-        else if (col.tag == "NPC")
-        {
-            npc_col = true;
-        }
-        else
-        {
-            collide = false;
-            war_col = false;
-            thief_col = false;
-            mage_col = false;
-            npc_col = false;
-        }
-    }
-
-    public void ResumeButton()
-    {
-        pause = false;
-    }
-
-    public void ExitButton()
-    {
-        SceneManager.LoadScene(0);
-    }
-
 }

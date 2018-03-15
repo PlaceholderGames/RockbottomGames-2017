@@ -5,7 +5,7 @@ using UnityEngine;
 public class Throwing : MonoBehaviour {
 
     private GameObject prefab;
-    public GameObject WarriorWeapon;
+    private GameObject WarriorWeapon;
     private GameObject ThiefWeapon;
     private GameObject MageWeapon;
     public GameObject Hatchet;
@@ -28,7 +28,7 @@ public class Throwing : MonoBehaviour {
 
     void Awake()
     {
-        weaponEnabled = false;
+        weaponEnabled = true;
     }
   
 	// Update is called once per frame
@@ -38,10 +38,10 @@ public class Throwing : MonoBehaviour {
         if (weaponEnabled == true)
 
         {
-            if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
+            if (Input.GetMouseButtonDown(0) && InputDetector.pause == false)
             {
                 throwing();
-                weaponSelection();
+//                weaponSelection();
             }
         }
 	}
@@ -54,11 +54,11 @@ public class Throwing : MonoBehaviour {
             projectile.transform.position = weapon.transform.position + cameraPos.transform.forward;
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = cameraPos.transform.forward * force;
-            StartCoroutine(timer());
+            //StartCoroutine(timer());
         }
     }
 
-    void weaponSelection()
+/*  void weaponSelection()
     {
         WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
 
@@ -70,7 +70,6 @@ public class Throwing : MonoBehaviour {
         }
         if (classChecker.thief_col == true)
         {
-
             prefab = Dagger;
         }
         if (classChecker.mage_col == true)
@@ -78,6 +77,8 @@ public class Throwing : MonoBehaviour {
             prefab = Fireball;
         }
     }
+    */
+    
     IEnumerator timer()
     {
         enter = true;
