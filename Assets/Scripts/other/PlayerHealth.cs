@@ -3,35 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : BaseCharacterClass
+public class PlayerHealth : MonoBehaviour
 {
     public bool enter = false;
     private float delay = 0.2f;
-    private HealthBarControl healthBar;
-    public GameObject deathWindow;
-    public Transform cameraMove;
+    public static int baseHealth;
+    public static int characterHealth;
+    protected int characterDamage;
+    protected int enemyDamage;
+    public bool takeDamage;
 
-    void Awake()
+    public GameObject deathMessage;
+
+    private void Start()
     {
-        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarControl>();
+        enemyDamage = 10;
     }
-
     void Update()
     {
+        Debug.Log(characterHealth);
         //checks if play is dead.
         if (characterHealth <= 0)
         {
-            cameraMove.GetComponent<camera>().cameraActive = false;
-            Cursor.visible = true;
-            deathWindow.SetActive(true);
+            deathMessage.SetActive(true);
         }
-
         if (takeDamage == true) //checks if damage bool is active. 
         {
             if (enter == false) //check is the time delay is deactivated.
             {
-                StartCoroutine(timer());
-                characterHealth = characterHealth - enemyDamage;
+                characterHealth = characterHealth - enemyDamage; // dealts the damage.
+                StartCoroutine(timer()); // starts the timer
+                takeDamage = false;// sets the damage bool to false. ready for next damage.
             }
         }
 
@@ -50,13 +52,6 @@ public class PlayerHealth : BaseCharacterClass
         if (col.tag == "enemyAttack")
         {
             takeDamage = true;
-        }
-    }
-    void OnTriggerExit(Collider col)
-    {
-        if (col.tag == "enemyAttack")
-        {
-            takeDamage = false;
         }
     }
 }

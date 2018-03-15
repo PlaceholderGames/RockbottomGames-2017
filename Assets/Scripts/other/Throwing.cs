@@ -38,10 +38,10 @@ public class Throwing : MonoBehaviour {
         if (weaponEnabled == true)
 
         {
-            if (Input.GetMouseButtonDown(0) && pause.GetComponent<InputDetector>().pause == false)
+            if (Input.GetMouseButtonDown(0) && InputDetector.pause == false)
             {
                 throwing();
-                weaponSelection();
+ //               weaponSelection();
             }
         }
 	}
@@ -58,7 +58,7 @@ public class Throwing : MonoBehaviour {
         }
     }
 
-  void weaponSelection()
+ /* void weaponSelection()
     {
         WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
 
@@ -78,6 +78,7 @@ public class Throwing : MonoBehaviour {
             prefab = Fireball;
         }
     }
+    */
     
     IEnumerator timer()
     {
