@@ -3,37 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : BaseCharacterClass
 {
     public bool enter = false;
     private float delay = 0.2f;
-    public static int baseHealth;
-    public static int characterHealth;
-    protected int characterDamage;
-    protected int enemyDamage;
-    public bool takeDamage;
+    private HealthBarControl healthBar;
 
-    public GameObject deathMessage;
-
-    private void Start()
+    void Awake()
     {
-        enemyDamage = 10;
+        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarControl>();
     }
+
     void Update()
     {
-        Debug.Log(characterHealth);
         //checks if play is dead.
         if (characterHealth <= 0)
         {
             deathMessage.SetActive(true);
         }
+
         if (takeDamage == true) //checks if damage bool is active. 
         {
             if (enter == false) //check is the time delay is deactivated.
             {
-                characterHealth = characterHealth - enemyDamage; // dealts the damage.
-                StartCoroutine(timer()); // starts the timer
-                takeDamage = false;// sets the damage bool to false. ready for next damage.
+                StartCoroutine(timer());
+                characterHealth = characterHealth - enemyDamage;
             }
         }
 
@@ -52,6 +46,13 @@ public class PlayerHealth : MonoBehaviour
         if (col.tag == "enemyAttack")
         {
             takeDamage = true;
+        }
+    }
+    void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "enemyAttack")
+        {
+            takeDamage = false;
         }
     }
 }

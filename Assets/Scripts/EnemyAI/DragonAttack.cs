@@ -18,11 +18,13 @@ public class DragonAttack : MonoBehaviour
     public int attackDamage = 10;////////
     Rigidbody fireballRB;
 
+    BaseCharacterClass baseCharacterClass;
 
     // Use this for initialization
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        baseCharacterClass = player.GetComponent<BaseCharacterClass>();
 
         //timer//////////////////////////
         timer += Time.deltaTime;
@@ -45,13 +47,12 @@ public class DragonAttack : MonoBehaviour
         //Attack Function
         timer = 0f;     //resets timer.
         transform.LookAt(lastPos.transform.position);
-   /*     if (baseCharacterClass.characterHealth > 0)
+        if (baseCharacterClass.characterHealth > 0)
         {
             GameObject fireballInstance = Instantiate(fireballPrefab) as GameObject;
             fireballInstance.transform.position = transform.position;
             Rigidbody rb = fireballInstance.GetComponent<Rigidbody>();
             rb.velocity = transform.forward * force;
         }
-        */
     }
 }
