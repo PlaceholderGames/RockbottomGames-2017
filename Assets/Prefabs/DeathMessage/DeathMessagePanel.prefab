@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 114340155959403140}
   - component: {fileID: 114928861357733678}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: DeathMessagePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
