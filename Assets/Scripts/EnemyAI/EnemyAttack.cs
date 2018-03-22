@@ -7,18 +7,15 @@ public class EnemyAttack : BaseCharacterClass
     private float villagerAttackSpeed = 0.25f;
     private float timer = 5f;
     public GameObject player;
+    bool playerInRange = false;
 
     void Update ()
     {
         timer += Time.deltaTime;
-        if (attack == true && timer >= villagerAttackSpeed)
+        if (playerInRange == true && timer >= villagerAttackSpeed)
         {
-            PlayerHealth.characterHealth = PlayerHealth.characterHealth - villagerDamage;
+            player.GetComponent<PlayerHealth>().damageTaken(villagerDamage);
             timer = 0f;
-        }
-        if (PlayerHealth.characterHealth <= 0)
-        {
-            attack = false;
         }
     }
 
@@ -26,7 +23,7 @@ public class EnemyAttack : BaseCharacterClass
     {
         if (col.tag == "Player")
         {
-            attack = true;
+            playerInRange = true;
         }
     }
 
@@ -34,7 +31,7 @@ public class EnemyAttack : BaseCharacterClass
     {
         if (col.tag == "Player")
         {
-            attack = false;
+            playerInRange = false;
         }
     }
 }

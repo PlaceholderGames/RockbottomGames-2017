@@ -23,7 +23,6 @@ public class DragonAttack : BaseCharacterClass
     void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        //baseCharacterClass = player.GetComponent<BaseCharacterClass>();
 
         //timer//
         timer += Time.deltaTime;

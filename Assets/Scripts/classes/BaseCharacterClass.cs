@@ -10,5 +10,4 @@ public class BaseCharacterClass : MonoBehaviour
     protected int characterDamage = 10;
     public static int villagerDamage = 10;
     public static int fireballDamage = 20;
-    public bool attack = false;
 }

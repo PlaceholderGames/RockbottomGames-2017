@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class FireballDamage : BaseCharacterClass
 {
-    public GameObject player;
+    bool damageDone = false;
 
     void Update ()
     {
-        if (attack == true)
-        {
-           PlayerHealth.characterHealth =PlayerHealth.characterHealth - fireballDamage;
-            attack = false;
-            Destroy(gameObject);
-        }
+
     }
 
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("attack");
-            attack = true;
-          //  Destroy(gameObject);
+            if (damageDone == false)
+            {
+                damageDone = true;
+                col.GetComponent<PlayerHealth>().damageTaken(fireballDamage);
+                Destroy(gameObject);
+            }          
+        }
+
+        if (col.gameObject.tag == "Terrain")
+        {
+            Destroy(gameObject);
         }
     }
-    //void OnTriggerExit(Collider col)
-    //{
-    //    if (col.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("Exit");
-    //        attack = false;
-    //    }
-    //}
 }

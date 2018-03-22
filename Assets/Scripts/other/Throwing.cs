@@ -24,6 +24,10 @@ public class Throwing : MonoBehaviour {
     private float spawn = 1f;
     private float force = 40f;
 
+    private bool axeCooldown = false;
+    private const int MAX_VALUE = 5;
+    private const int MIN_VALUE = 1;
+
     InputDetector classChecker;
 
     void Awake()
@@ -35,57 +39,62 @@ public class Throwing : MonoBehaviour {
 
 	void Update ()
     {
-        if (weaponEnabled == true)
-
+        if (axeCooldown == false)
         {
-            if (Input.GetMouseButtonDown(0) && InputDetector.pause == false)
-            {
-                throwing();
- //               weaponSelection();
-            }
+            throwing();
         }
+        tick();
 	}
 
     void throwing()
     {
-        if (enter == false)
+        if (Input.GetMouseButtonDown(0) && InputDetector.pause == false)
         {
-            GameObject projectile = Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
-            projectile.transform.position = weapon.transform.position + cameraPos.transform.forward;
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            rb.velocity = cameraPos.transform.forward * force;
-            //StartCoroutine(timer());
+            if (enter == false)
+             {   
+                GameObject projectile = Instantiate(Dagger, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
+                projectile.transform.position = weapon.transform.position + cameraPos.transform.forward;
+                Rigidbody rb = projectile.GetComponent<Rigidbody>();
+                rb.velocity = cameraPos.transform.forward * force;
+                Destroy(projectile, 2f);
+             }
         }
+
     }
 
- /* void weaponSelection()
+    void tick()
     {
-        WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
-
-
-        if (classChecker.war_col == true)
+        if (GameObject.FindGameObjectsWithTag("Hatchet").Length >= MAX_VALUE || GameObject.FindGameObjectsWithTag("Dagger").Length >= MAX_VALUE)
         {
-            WarriorWeapon.SetActive(true);
-            prefab = Hatchet;
+            axeCooldown = true;
         }
-        if (classChecker.thief_col == true)
+        else
         {
-
-            prefab = Dagger;
-        }
-        if (classChecker.mage_col == true)
-        {
-            prefab = Fireball;
+            axeCooldown = false;
         }
     }
-    */
-    
-    IEnumerator timer()
-    {
-        enter = true;
-        yield return new WaitForSecondsRealtime(delay);
-        enter = false;
-    }
+
+    /* void weaponSelection()
+       {
+           WarriorWeapon = GameObject.FindGameObjectWithTag("Hatchet");
+
+
+           if (classChecker.war_col == true)
+           {
+               WarriorWeapon.SetActive(true);
+               prefab = Hatchet;
+           }
+           if (classChecker.thief_col == true)
+           {
+
+               prefab = Dagger;
+           }
+           if (classChecker.mage_col == true)
+           {
+               prefab = Fireball;
+           }
+       }
+       */
 
     void OnTriggerEnter(Collider col)
     {

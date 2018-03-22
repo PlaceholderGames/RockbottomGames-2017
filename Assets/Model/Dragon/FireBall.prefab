@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54518319965966666}
   - component: {fileID: 135976240020650670}
   - component: {fileID: 114628701135324928}
+  - component: {fileID: 114764722867398436}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: enemyAttack
@@ -110,6 +111,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03bb6c49998856a468be092d27be2e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114764722867398436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365292715337530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e316a3de54afa544c8c9f6c850d1386d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterHealth: 100
 --- !u!135 &135771097290776666
 SphereCollider:
   m_ObjectHideFlags: 1

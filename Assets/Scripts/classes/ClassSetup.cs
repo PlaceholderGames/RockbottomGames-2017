@@ -7,8 +7,8 @@ public class ClassSetup : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PlayerHealth.baseHealth = 10;
-        PlayerHealth.characterHealth = 10;
+        PlayerHealth.baseHealth = 100;
+        PlayerHealth.characterHealth = 100;
     }
 
     public void SetMage()
@@ -28,6 +28,4 @@ public class ClassSetup : MonoBehaviour
         PlayerHealth.baseHealth = 120;
         PlayerHealth.characterHealth = 120;
     }
-
-
 }
