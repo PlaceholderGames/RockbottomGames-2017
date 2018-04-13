@@ -41,6 +41,7 @@ public class Throwing : MonoBehaviour {
             if (Input.GetMouseButtonDown(0) && InputDetector.pause == false)
             {
                 throwing();
+                prefab = Hatchet;
  //               weaponSelection();
             }
         }

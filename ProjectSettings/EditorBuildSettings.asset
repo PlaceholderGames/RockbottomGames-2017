@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/ForestScene/ForestScene_2.2.unity
     guid: 8be5c276ae5f7bb43ad42264743cc532
+  - enabled: 1
+    path: Assets/Scene/HouseScene/houseScene.unity
+    guid: 00000000000000000000000000000000

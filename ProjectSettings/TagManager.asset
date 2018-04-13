@@ -22,6 +22,7 @@ TagManager:
   - Classes
   - Fire
   - Enemy
+  - House
   layers:
   - Default
   - TransparentFX
