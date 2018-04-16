@@ -59,7 +59,6 @@ public class Throwing : MonoBehaviour {
                 Destroy(projectile, 2f);
              }
         }
-
     }
 
     void tick()
