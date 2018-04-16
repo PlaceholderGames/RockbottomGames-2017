@@ -9,6 +9,8 @@ public class DragonHealth : BaseCharacterClass
     private int dragonCurrentHealth;
     //private HealthBarControl healthBar;
 
+    public GameObject killedMessage;
+
     void Start()
     {
         dragonCurrentHealth = dragonHealth;
@@ -24,6 +26,8 @@ public class DragonHealth : BaseCharacterClass
         if (dragonCurrentHealth <= 0)
         {
             Destroy(gameObject);
+            killedMessage.SetActive(true);
+
         }
 
         //////////if (takeDamage == true) //checks if damage bool is active. 

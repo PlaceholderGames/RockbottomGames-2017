@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HideDeadMessage : MonoBehaviour {
-    public GameObject DeadMessageBox;
+public class HideMessageBox : MonoBehaviour {
+    public GameObject MessageBox;
 	// Use this for initialization
 	void Start () {
-        DeadMessageBox.SetActive(false);
+        MessageBox.SetActive(false);
 	}
 	
 
