@@ -13,13 +13,13 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log(characterHealth);
     }
 
     public void damageTaken(int enemyDamageAmount)
     {
         characterHealth = characterHealth - enemyDamageAmount; // dealts the damage.
-
+        
         //checks if play is dead.
         if (characterHealth <= 0)
         {
