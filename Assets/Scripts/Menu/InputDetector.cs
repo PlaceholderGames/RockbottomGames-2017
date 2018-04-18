@@ -9,7 +9,7 @@ public class InputDetector : MonoBehaviour
     public static bool collide;
     public GameObject pauseMenu;
     public Transform cameraMove;
-    public GameObject Interact;
+    public static GameObject Interact;
 
     void Start()
     {

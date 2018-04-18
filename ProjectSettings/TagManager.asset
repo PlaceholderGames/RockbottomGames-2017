@@ -23,6 +23,7 @@ TagManager:
   - Fire
   - Enemy
   - House
+  - Bedroom
   layers:
   - Default
   - TransparentFX
