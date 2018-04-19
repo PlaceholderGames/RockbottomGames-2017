@@ -15,6 +15,7 @@ public class InputDetector : MonoBehaviour
     {
         pause = false;
         collide = false;
+        
     }
     void Update()
     {

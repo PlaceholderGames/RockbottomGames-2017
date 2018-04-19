@@ -64,17 +64,22 @@ public class HouseStoryline : MonoBehaviour {
             Mission1.SetActive(false);
             Mission2.SetActive(true);
         }
+        else if(other.tag == "Toilet")
+        {
+
+        }
+        else if(other.tag == "Pizza")
+        {
+            InputDetector.collide = true;
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-
-    }
 
     private void OnTriggerExit(Collider other)
     {
         Door.SetActive(false);
         Bedroom1.SetActive(false);
+        Bathroom.SetActive(false);
     }
 
     private void SetMessageFalse()

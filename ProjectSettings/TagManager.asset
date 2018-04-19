@@ -24,6 +24,9 @@ TagManager:
   - Enemy
   - House
   - Bedroom
+  - Bathroom
+  - Toilet
+  - Pizza
   layers:
   - Default
   - TransparentFX

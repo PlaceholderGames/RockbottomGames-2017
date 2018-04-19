@@ -291,11 +291,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &235635302 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1563927655031118, guid: 023129d73f8ecf84d955ab836b77f055,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688681776}
 --- !u!224 &235635303 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224669597724402250, guid: 023129d73f8ecf84d955ab836b77f055,
@@ -2549,7 +2544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1563927655031118, guid: 023129d73f8ecf84d955ab836b77f055, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 023129d73f8ecf84d955ab836b77f055, type: 2}
@@ -2728,7 +2723,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 282419952}
   cameraMove: {fileID: 924249686}
-  Interact: {fileID: 235635302}
 --- !u!136 &2011477336
 CapsuleCollider:
   m_ObjectHideFlags: 0
