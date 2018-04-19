@@ -51,6 +51,7 @@ public class InputDetector : MonoBehaviour
 
         else if (pause == false)
         {
+            pauseMenu.SetActive(false);
             Time.timeScale = 1;
             cameraMove.GetComponent<camera>().cameraActive = true;
             GetComponent<camera>().cameraActive = true;

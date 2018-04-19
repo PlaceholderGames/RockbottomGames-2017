@@ -21,7 +21,7 @@ public class LockCursorState : MonoBehaviour {
     void OnGUI()
     {
         // Release cursor on escape keypress.
-        if (Input.GetKeyDown(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.E) || PlayerHealth.characterHealth <= 0)
         {
             Cursor.lockState = wantedMode = CursorLockMode.None; // sets cursor to unlocked.
             Cursor.visible = true; // set the cursor to visible.
