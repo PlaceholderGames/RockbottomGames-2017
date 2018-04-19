@@ -33,4 +33,7 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.meta
+<<<<<<< HEAD
 Assets/Model/Weapons.meta
+=======
+>>>>>>> a7b71051708614c82f802e0e99de23d211ace85e

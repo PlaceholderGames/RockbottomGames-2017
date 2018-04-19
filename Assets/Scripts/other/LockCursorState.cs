@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class LockCursorState : MonoBehaviour {
 
+    
     CursorLockMode wantedMode; // Cotains cursor mode.
-  
+    
     void Awake() // Activate at the beginning of runtime.
     {
         setCursorState(); // call the setCursorState Function.
+      
     }
 
     void setCursorState()
@@ -16,13 +18,18 @@ public class LockCursorState : MonoBehaviour {
         Cursor.lockState = wantedMode = CursorLockMode.Locked; // sets the cursors lockstate to locked.
         // Hide cursor when locking
         Cursor.visible = false;
+        
     }
 
     void OnGUI()
     {
         // Release cursor on escape keypress.
         if (Input.GetKeyDown(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.E) || PlayerHealth.characterHealth <= 0)
+<<<<<<< HEAD
         {
+=======
+        { 
+>>>>>>> a7b71051708614c82f802e0e99de23d211ace85e
             Cursor.lockState = wantedMode = CursorLockMode.None; // sets cursor to unlocked.
             Cursor.visible = true; // set the cursor to visible.
         }

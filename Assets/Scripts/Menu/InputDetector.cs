@@ -34,7 +34,7 @@ public class InputDetector : MonoBehaviour
 
         if (pause == true)
         {
-            Cursor.visible = true;
+            
             Time.timeScale = 0;
             cameraMove.GetComponent<camera>().cameraActive = false;
             GetComponent<camera>().cameraActive = false;
@@ -55,6 +55,7 @@ public class InputDetector : MonoBehaviour
             Time.timeScale = 1;
             cameraMove.GetComponent<camera>().cameraActive = true;
             GetComponent<camera>().cameraActive = true;
+            pauseMenu.SetActive(false);
         }
     }
 }
