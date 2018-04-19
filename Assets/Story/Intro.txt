@@ -1,0 +1,34 @@
+UnKnown;	Hello, Welcome to a wonderful game.
+UnKnown;	We hope you enjoy this game.
+UnKnown;	A story driven by its creator,
+UnKnown;	A game where you must work and solve puzzles.
+UnKnown;	A game where you kill enimies and talk to strangers.
+UnKnown;	A game where... Well, you get the idea.
+UnKnown;	This game is the same as every other, But dont tell him that.
+UnKnown;	Now, before we get into this. You will need to know the controls.
+UnKnown;	There is no way he will remmber to do this.
+
+UnKnown;	Now you should be able to move the camera.
+UnKnown;	Go on stretch those lenses out, good.
+UnKnown;	Now for the hard part lets go and try using the tripod.
+UnKnown;	Hahah, get it. Because your in a game, and your a camera... ahhh ..hah, uhhhh.
+
+UnKnown;	So, now lets try and move around.
+UnKnown;	By pressing "W" "A" "S" "D", to move forwards and backwards, left to right.
+UnKnown;	There we go.
+UnKnown;	My creator should be coming now, please dont say anyting about me. 
+UnKnown;	Im a secret...
+
+Skype; "Ring Ring"
+
+BigCheese;	Ahhh, your in.
+BigCheese;	I can see that your logged in from my computer. I can watch your progress form here.
+BigCheese;	Well then, welcome to my game. A game that I created. Well i say I..
+BigCheese;	But i had some little bit of help here and there. But between you and me..
+BigCheese;	I did most of the work.
+BigCheese;	I can see that you have already got the controls down and working. Good,
+BigCheese;	Saves us a lot of time, they are really hard to teach.
+BigCheese;	Right, So lets take a step back while we continue with the game.
+BigCheese;	Lets bring in the doors....
+
+BigCheese;	Good!!
