@@ -27,5 +27,9 @@ public class FireballDamage : BaseCharacterClass
         {
             Destroy(gameObject);
         }
+        if (col.gameObject.tag == "Dagger")
+        {
+            Destroy(gameObject);
+        }
     }
 }

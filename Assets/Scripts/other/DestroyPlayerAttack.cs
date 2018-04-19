@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyPlayerAttack : MonoBehaviour {
+public class DestroyPlayerAttack : MonoBehaviour
+{
     //Destroys GameObjects when interacting with this Tag.
     void OnTriggerEnter(Collider col)
     {

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int baseHealth;
+    public static int playerBaseHealth;
     public static int characterHealth;
-    protected int characterDamage;
+    //protected int characterDamage;
 
     public GameObject deathMessage;
 
@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void damageTaken(int enemyDamageAmount)
     {
-        characterHealth = characterHealth - enemyDamageAmount; // dealts the damage.
+        characterHealth = characterHealth - enemyDamageAmount; // deals the damage.
 
         //checks if play is dead.
         if (characterHealth <= 0)

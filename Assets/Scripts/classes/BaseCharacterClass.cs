@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseCharacterClass : MonoBehaviour
 {
-    protected int dragonHealth = 100;
+    public static int dragonHealth = 100;
     protected int villagerHealth = 50;
     public int characterHealth = 100;
     protected int characterDamage = 10;

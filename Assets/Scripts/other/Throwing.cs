@@ -26,7 +26,6 @@ public class Throwing : MonoBehaviour {
 
     private bool axeCooldown = false;
     private const int MAX_VALUE = 5;
-    private const int MIN_VALUE = 1;
 
     InputDetector classChecker;
 

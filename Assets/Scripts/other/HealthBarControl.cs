@@ -6,20 +6,31 @@ using UnityEngine.UI;
 
 public class HealthBarControl : MonoBehaviour
 {
-    public Slider healthBar;
+    public Slider playerHealthBar;
+    public Slider dragonHealthBar;
 
     void Awake()
     {
-        healthBar.maxValue = PlayerHealth.baseHealth;
-        healthBar.value = PlayerHealth.characterHealth;
+        playerHealthBar.maxValue = PlayerHealth.playerBaseHealth;
+        playerHealthBar.value = PlayerHealth.characterHealth;
+
+        dragonHealthBar.maxValue = BaseCharacterClass.dragonHealth;
+        dragonHealthBar.value = DragonHealth.dragonCurrentHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.maxValue = PlayerHealth.baseHealth;
-        healthBar.value = PlayerHealth.characterHealth;
-    }
+        playerHealthBar.maxValue = PlayerHealth.playerBaseHealth;
+        playerHealthBar.value = PlayerHealth.characterHealth;
 
+        dragonHealthBar.maxValue = DragonHealth.dragonHealth;
+        dragonHealthBar.value = DragonHealth.dragonCurrentHealth;
+
+        if (DragonHealth.dragonCurrentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
 
