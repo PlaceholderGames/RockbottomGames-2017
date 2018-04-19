@@ -11,11 +11,6 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject deathMessage;
 
-    void Update()
-    {
-        Debug.Log(characterHealth);
-    }
-
     public void damageTaken(int enemyDamageAmount)
     {
         characterHealth = characterHealth - enemyDamageAmount; // dealts the damage.

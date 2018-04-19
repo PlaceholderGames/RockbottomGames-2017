@@ -17,7 +17,6 @@ public class Menu : MonoBehaviour
     public void ResumeGame()
     {
         InputDetector.pause = false;
-        Cursor.visible = false;
     }
     public void MainMenu()
     {

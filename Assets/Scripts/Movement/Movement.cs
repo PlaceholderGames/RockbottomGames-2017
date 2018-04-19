@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour {
     private float walkSpeed = 10.0f;
     private float runSpeed = 25.0f;
     private float gravity = 20f;
-    public float maxVelocityChange = 10.0f;
+    private float maxVelocityChange = 10.0f;
     float jumpHeight = 2.0f;
     public Rigidbody rb;
    

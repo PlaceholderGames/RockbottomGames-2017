@@ -6,8 +6,9 @@ public class DragonHealth : BaseCharacterClass
 {
    // private bool enter = false;
    // private float delay = 0.2f;
-    private int dragonCurrentHealth;
+    public static int dragonCurrentHealth;
     //private HealthBarControl healthBar;
+    public GameObject KillMessage;
 
     void Start()
     {
@@ -23,6 +24,9 @@ public class DragonHealth : BaseCharacterClass
     {   //checks if play is dead.
         if (dragonCurrentHealth <= 0)
         {
+            InputDetector.pause = true;
+            KillMessage.SetActive(true);
+            
             Destroy(gameObject);
         }
 
