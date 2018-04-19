@@ -27,6 +27,7 @@ TagManager:
   - Bathroom
   - Toilet
   - Pizza
+  - Bed
   layers:
   - Default
   - TransparentFX

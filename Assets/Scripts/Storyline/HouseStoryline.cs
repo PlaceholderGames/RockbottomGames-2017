@@ -11,17 +11,28 @@ public class HouseStoryline : MonoBehaviour {
     public GameObject Bedroom1;
     public GameObject Bedroom2;
     public GameObject Bathroom;
-    public GameObject Mission1;
-    public GameObject Mission2;
-    float MessageTime = 15;
+    public GameObject houseMission;
+    public GameObject pizzaMission;
+    public GameObject tioletMission;
+    public GameObject bedroomMission;
+    public GameObject Pizza;
 
-    public bool enter;
+    float MessageTime = 15;
+    float pizzaTime = 5;
+    float bedroomTime = 5;
+
+    public GameObject pizzaBox;
+    public GameObject bedroom;
+    bool pizzaFlag;
+    bool bedroomFlag;
+
 
     private void Start()
     {
-        enter = false;
+        pizzaFlag = false;
+        bedroomFlag = false;
         Message1.SetActive(true);
-        Mission1.SetActive(true);
+        houseMission.SetActive(true);
     }
     // Update is called once per frame
     void Update()
@@ -38,7 +49,32 @@ public class HouseStoryline : MonoBehaviour {
             Message2.SetActive(false);
         }
 
+        if(pizzaFlag)
+        {
+            pizzaTime -= Time.deltaTime;
 
+            Pizza.SetActive(false);
+            Bathroom.SetActive(true);
+            pizzaMission.SetActive(false);
+            tioletMission.SetActive(true);
+
+            if(pizzaTime < 0)
+            {
+                Bathroom.SetActive(false);
+                pizzaFlag = false;
+            }
+        }
+
+        if(bedroomFlag)
+        {
+            bedroomTime -= Time.deltaTime;
+            Bedroom2.SetActive(true);
+            if(bedroomTime < 0)
+            {
+                Bedroom2.SetActive(false);
+                bedroomFlag = false;
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -52,34 +88,57 @@ public class HouseStoryline : MonoBehaviour {
                 Door.SetActive(true);
             }
         }
-        else if (other.tag == "Bedroom")
+        if (other.tag == "Bedroom")
         {
-            SetMessageFalse();
-            Bedroom1.SetActive(true);
+            if (!bedroomFlag)
+            {
+                SetMessageFalse();
+                Bedroom1.SetActive(true);
+            }
         }
-        else if(other.tag == "Bathroom")
-        {
-            SetMessageFalse();
-            Bathroom.SetActive(true);
-            Mission1.SetActive(false);
-            Mission2.SetActive(true);
-        }
-        else if(other.tag == "Toilet")
-        {
-
-        }
-        else if(other.tag == "Pizza")
+        if(other.tag == "Pizza")
         {
             InputDetector.collide = true;
+            SetMessageFalse();
+
+            Pizza.SetActive(true);
+            houseMission.SetActive(false);
+            pizzaMission.SetActive(true);
+
+            if (Input.GetKeyDown("e"))
+            {
+                pizzaBox.tag = "Untagged";
+                pizzaFlag = true;
+            }
+        }
+        if (other.tag == "Toilet")
+        {
+            InputDetector.collide = true;
+            if(Input.GetKeyDown("e"))
+            {
+                bedroomFlag = true;
+                bedroom.tag = "Untagged";
+            }
+        }
+        if (other.tag == "Bed")
+        {
+            InputDetector.collide = true;
+            if(Input.GetKeyDown("e"))
+            {
+                InputDetector.pause = true;
+            }
+
         }
     }
 
 
     private void OnTriggerExit(Collider other)
     {
+        InputDetector.collide = false;
         Door.SetActive(false);
         Bedroom1.SetActive(false);
         Bathroom.SetActive(false);
+        Pizza.SetActive(false);
     }
 
     private void SetMessageFalse()

@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 4104790623799554}
   - component: {fileID: 64445591074238612}
   - component: {fileID: 54648064537565590}
+  - component: {fileID: 65225047045110784}
+  - component: {fileID: 65634791499408280}
+  - component: {fileID: 114240228157982380}
   m_Layer: 0
   m_Name: Hatchet
   m_TagString: Hatchet
@@ -110,7 +113,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1821360770498006}
-  m_Mesh: {fileID: 4300000, guid: f65ddd19ce6541e4ba90d0f225b615d6, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6e90eb3ec263c394d89a08df7d664e86, type: 3}
 --- !u!54 &54648064537565590
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -139,4 +142,43 @@ MeshCollider:
   m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.001
-  m_Mesh: {fileID: 4300000, guid: f65ddd19ce6541e4ba90d0f225b615d6, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6e90eb3ec263c394d89a08df7d664e86, type: 3}
+--- !u!65 &65225047045110784
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775472842799172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65634791499408280
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775472842799172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114240228157982380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775472842799172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca94f67246c113a4181fd34da2abd1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterHealth: 100
+  attack: 0
+  damageEffect: {fileID: 1576947217811418, guid: 6e2d5574f756e8946924a73d730f6ba5,
+    type: 2}

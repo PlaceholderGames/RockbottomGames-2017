@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class ClassSetup : MonoBehaviour
 {
+    public GameObject Hatchet;
+    public GameObject Dagger;
+    public GameObject FireBall;
+    
+
+
     // Use this for initialization
     void Start()
     {
@@ -15,18 +21,21 @@ public class ClassSetup : MonoBehaviour
     {
         PlayerHealth.baseHealth = 90;
         PlayerHealth.characterHealth = 90;
+        Throwing.prefab = FireBall;
     }
 
     public void SetThief()
     {
         PlayerHealth.baseHealth = 100;
         PlayerHealth.characterHealth = 100;
+        Throwing.prefab = Dagger;
     }
 
     public void SetWarrior()
     {
         PlayerHealth.baseHealth = 120;
         PlayerHealth.characterHealth = 120;
+        Throwing.prefab = Hatchet;
     }
 
 

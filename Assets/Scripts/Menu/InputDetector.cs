@@ -9,16 +9,18 @@ public class InputDetector : MonoBehaviour
     public static bool collide;
     public GameObject pauseMenu;
     public Transform cameraMove;
-    public static GameObject Interact;
+    public GameObject Interact;
 
     void Start()
     {
+        Cursor.visible = false;
         pause = false;
         collide = false;
         
     }
     void Update()
     {
+        Debug.Log("Interact: " + collide);
         if(collide == true)
         {
             Interact.SetActive(true);
