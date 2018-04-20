@@ -8,6 +8,5 @@ public class HideDeadMessage : MonoBehaviour {
 	void Start () {
         DeadMessageBox.SetActive(false);
 	}
-	
 
 }

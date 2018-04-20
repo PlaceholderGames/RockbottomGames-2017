@@ -5,6 +5,7 @@ using UnityEngine;
 public class DragonHealth : BaseCharacterClass
 {
     public static float dragonCurrentHealth;
+    public GameObject killMessage;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class DragonHealth : BaseCharacterClass
     {   
         if (dragonCurrentHealth <= 0)
         {
+            killMessage.SetActive(true);
             Destroy(gameObject);
         }
     }
