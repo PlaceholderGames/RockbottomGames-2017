@@ -21,10 +21,15 @@ public class HouseStoryline : MonoBehaviour {
     float pizzaTime = 5;
     float bedroomTime = 5;
 
+    public GameObject winMessage;
+
     public GameObject pizzaBox;
     public GameObject bedroom;
+
     bool pizzaFlag;
     bool bedroomFlag;
+    bool bedFlag;
+    bool wcFlag;
 
 
     private void Start()
@@ -109,23 +114,32 @@ public class HouseStoryline : MonoBehaviour {
             {
                 pizzaBox.tag = "Untagged";
                 pizzaFlag = true;
+                wcFlag = true;
             }
         }
         if (other.tag == "Toilet")
         {
-            InputDetector.collide = true;
-            if(Input.GetKeyDown("e"))
+            if (wcFlag)
             {
-                bedroomFlag = true;
-                bedroom.tag = "Untagged";
+                InputDetector.collide = true;
+                if (Input.GetKeyDown("e"))
+                {
+                    bedFlag = true;
+                    bedroomFlag = true;
+                    bedroom.tag = "Untagged";
+                }
             }
         }
         if (other.tag == "Bed")
         {
-            InputDetector.collide = true;
-            if(Input.GetKeyDown("e"))
+            if(bedFlag)
             {
-                InputDetector.pause = true;
+                InputDetector.collide = true;
+                if (Input.GetKeyDown("e"))
+                {
+                    InputDetector.pause = true;
+                    winMessage.SetActive(true);
+                }
             }
 
         }

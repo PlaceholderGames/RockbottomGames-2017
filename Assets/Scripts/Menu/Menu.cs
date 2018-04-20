@@ -6,7 +6,7 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
 
     }
     public void QuitGame()
@@ -22,5 +22,13 @@ public class Menu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    public void LoadForest()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void LoadHouse()
+    {
+        SceneManager.LoadScene(3);
     }
 }
