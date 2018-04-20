@@ -3359,6 +3359,52 @@ Prefab:
     - {fileID: 114162420546834956, guid: de6fd555bdfaf7a4ca94dbefdc15db14, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: de6fd555bdfaf7a4ca94dbefdc15db14, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1086312549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1086312550}
+  - component: {fileID: 1086312552}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086312550
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086312549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1086312552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086312549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba9b51608ce1aa4baf36a2e3ce44ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Footstep
+    clip: {fileID: 8300000, guid: f32c004c0339b8943b3ccc048b48bc09, type: 3}
+    volume: 1
+    pitch: 0.1
+    source: {fileID: 0}
 --- !u!1 &1166529978
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,8 +5234,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1545795847}
-  m_LocalRotation: {x: -0.049778014, y: 0.020967461, z: 0.0010451592, w: 0.9985397}
-  m_LocalPosition: {x: 186.10068, y: -360.86813, z: -774.32355}
+  m_LocalRotation: {x: 0.087172285, y: 0.89959055, z: 0.21045254, w: -0.37262255}
+  m_LocalPosition: {x: -271.7419, y: -20.0247, z: -30.134947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1588337424}

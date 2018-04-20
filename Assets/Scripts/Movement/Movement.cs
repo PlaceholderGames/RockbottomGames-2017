@@ -39,6 +39,8 @@ public class Movement : MonoBehaviour {
             velChange.y = 0;
             rb.AddForce(velChange, ForceMode.VelocityChange);
 
+            FindObjectOfType<AudioManager>().Play("Footstep");
+
             if (jump && Input.GetButton("Jump"))
             {
                 rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
