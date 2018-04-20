@@ -1,34 +1,48 @@
-UnKnown;	Hello, Welcome to a wonderful game.
-UnKnown;	We hope you enjoy this game.
-UnKnown;	A story driven by its creator,
-UnKnown;	A game where you must work and solve puzzles.
-UnKnown;	A game where you kill enimies and talk to strangers.
-UnKnown;	A game where... Well, you get the idea.
-UnKnown;	This game is the same as every other, But dont tell him that.
-UnKnown;	Now, before we get into this. You will need to know the controls.
-UnKnown;	There is no way he will remmber to do this.
-
-UnKnown;	Now you should be able to move the camera.
-UnKnown;	Go on stretch those lenses out, good.
-UnKnown;	Now for the hard part lets go and try using the tripod.
-UnKnown;	Hahah, get it. Because your in a game, and your a camera... ahhh ..hah, uhhhh.
-
-UnKnown;	So, now lets try and move around.
-UnKnown;	By pressing "W" "A" "S" "D", to move forwards and backwards, left to right.
-UnKnown;	There we go.
-UnKnown;	My creator should be coming now, please dont say anyting about me. 
-UnKnown;	Im a secret...
+UnKnown:	Hello, Welcome to my world.
+UnKnown:	A world writen by my creator,
+UnKnown:	A world where you must work and solve puzzles.
+UnKnown:	A world where you kill enimies and talk to strangers.
+UnKnown:	A world where... Well, you get the idea.
+UnKnown:	This world is the same as every other, But dont tell him that...
+UnKnown:	Now, before we get into this. You will need to know how to move throught the world, there is no way he will remember to tell you.
+	   
+UnKnown:	Now you should be able to move the camera, go on stretch those lenses out...,
+UnKnown:	Good, you got that part done.
+UnKnown:	Now for the hard part lets go and try using the tripod....Hahah, get it. Because your in a game, and your a camera... ahhh ..hah, uhhhh.
+UnKnown:	So, now lets try and move around.
+UnKnown:	By pressing "W" "A" "S" "D", to move forwards and backwards, left to right.
+UnKnown:	There we go.
+UnKnown:	My creator should be coming now, please dont say anyting about me...
+UnKnown:	Im a secret...
 
 Skype; "Ring Ring"
 
-BigCheese;	Ahhh, your in.
-BigCheese;	I can see that your logged in from my computer. I can watch your progress form here.
-BigCheese;	Well then, welcome to my game. A game that I created. Well i say I..
-BigCheese;	But i had some little bit of help here and there. But between you and me..
-BigCheese;	I did most of the work.
-BigCheese;	I can see that you have already got the controls down and working. Good,
-BigCheese;	Saves us a lot of time, they are really hard to teach.
-BigCheese;	Right, So lets take a step back while we continue with the game.
-BigCheese;	Lets bring in the doors....
+BigCheese:	Ahhh, your in.
+BigCheese:	I can see that your logged in from my computer. I can watch your progress form here.
+BigCheese:	Well then, welcome to my game. A game that I created. Well i say I..But i had some little bit of help here and there. But between you and me.. I did most of the work.
+BigCheese:	Now is there anything I need to tell you ..., Nope i think we are good to go.
+BigCheese:	Right, So lets take a step back while we continue with the game.
+BigCheese:	Lets bring in the doors....
+BigCheese:	Wait this isnt right...
+BigCheese:	..........
+BigCheese:	A tad bit high but it will do,... I was told that was fixed.
+BigCheese:	Ooooh well, you can clearly see that I didnt create that part.
 
-BigCheese;	Good!!
+BigCheese:	Now each door will take you to a different. A magical land full of wonder and sparkles. A place where you wife can leave you, take your house and find out about a long lost son that you didnt even knew existed, but died over two years ago.
+BigCheese:	A place that can suck the L... Come on now, lets not start this again.
+BigCheese:	Now, what was i saying. Oh yes, each door leads to a different place. Lets try the first one shall we?
+BigCheese:	I forgot what is in the first one, but im sure you wull love it.
+
+BigCheese:	Well lets continue with the game.... Why dont you walk to the right door.
+BigCheese:	So before we start lets have a 2 minute silence for Peblo. My son.
+
+UnKnown:	Pissst, You can skip this if you want. just press the enter key!!
+
+BigCheese:	Woow, hey!!!.
+BigCheese:	What did you do, we were suppose to be having a moment.... Well I guess you just dont care... 
+BigCheese:	Well since we have that out of the way. lets continue.
+BigCheese:	Why dont you walk throught the door on the far left and start this game.
+
+
+
+

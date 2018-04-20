@@ -26,6 +26,9 @@ public class TextBoxManager : MonoBehaviour {
     Transform tfDoors;
     public GameObject Doors;
 
+    Transform tfBrokeDoors;
+    public GameObject brokeDoors;
+
 
     // Use this for initialization
     void Start()
@@ -75,6 +78,10 @@ public class TextBoxManager : MonoBehaviour {
             currentLine += 1;
         }
 
+        //Wait command.
+
+      
+
         if (currentLine > endAtLine)
         {
             DisableTextBox();   //Stops at the current set endline
@@ -86,11 +93,16 @@ public class TextBoxManager : MonoBehaviour {
             Disableinemtic();
         }
 
-        if(currentLine == 33)
+        if(currentLine == 32)
         {
             Debug.Log("Line28");
             tfDoors.position = new Vector3(0.0f, 8f, 0.0f);
            
+        }
+
+        if(currentLine == 34)
+        {
+            brokeDoors.SetActive(true);
         }
 
     }
