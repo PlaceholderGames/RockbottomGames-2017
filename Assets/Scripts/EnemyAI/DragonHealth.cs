@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DragonHealth : BaseCharacterClass
 {
-    public static int dragonCurrentHealth;
-
+    public static float dragonCurrentHealth;
 
     void Start()
     {
@@ -14,16 +13,15 @@ public class DragonHealth : BaseCharacterClass
 
     void Update()
     {   
-        //checks if play is dead.
         if (dragonCurrentHealth <= 0)
         {
             Destroy(gameObject);
         }
     }
 
-    public void DamageEnemy(int damage)
+    public void DamageEnemy()
     {
-        dragonCurrentHealth -= damage;
+        dragonCurrentHealth -= characterDamage;
     }
 }
 

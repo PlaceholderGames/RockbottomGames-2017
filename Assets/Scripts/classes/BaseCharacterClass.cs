@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BaseCharacterClass : MonoBehaviour
 {
-    public static int dragonHealth = 100;
-    protected int villagerHealth = 50;
-    public int characterHealth = 100;
-    protected int characterDamage = 10;
+    public int characterHealth;
+    public static float characterDamage;
+    public static int dragonHealth = 200;
+    protected int villagerHealth = 20;
     public static int villagerDamage = 10;
-    public static int fireballDamage = 20;
+    public static int fireballDamage = 25;
 }

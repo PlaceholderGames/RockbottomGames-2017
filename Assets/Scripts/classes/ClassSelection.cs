@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClassSelection : MonoBehaviour
 {
-
     public GameObject WarriorDescription;
     public GameObject ThiefDescription;
     public GameObject MageDescription;

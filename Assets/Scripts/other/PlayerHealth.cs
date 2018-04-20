@@ -7,7 +7,6 @@ public class PlayerHealth : MonoBehaviour
 {
     public static int playerBaseHealth;
     public static int characterHealth;
-    //protected int characterDamage;
 
     public GameObject deathMessage;
 

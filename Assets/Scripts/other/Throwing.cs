@@ -51,7 +51,7 @@ public class Throwing : MonoBehaviour {
         {
             if (enter == false)
              {   
-                GameObject projectile = Instantiate(Dagger, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
+                GameObject projectile = Instantiate(Hatchet, new Vector3(0, 0, 0), Quaternion.Slerp(cameraPos.rotation, cameraPos.rotation, Time.time * speed)) as GameObject;
                 projectile.transform.position = weapon.transform.position + cameraPos.transform.forward;
                 Rigidbody rb = projectile.GetComponent<Rigidbody>();
                 rb.velocity = cameraPos.transform.forward * force;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : BaseCharacterClass
 {
-    public int enemyCurrentHealth;
+    public float enemyCurrentHealth;
 
     void Start()
     {
@@ -19,8 +19,8 @@ public class EnemyHealth : BaseCharacterClass
         }
     }
 
-    public void DamageEnemy (int damage)
+    public void DamageEnemy()
     {
-        enemyCurrentHealth -= damage;
+        enemyCurrentHealth -= characterDamage;
     }
 }

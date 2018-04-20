@@ -16,19 +16,17 @@ public class PlayerAttack : BaseCharacterClass
     {
         if (col.tag == "Enemy")
         {
-
             GetComponent<Rigidbody>().isKinematic = true;
             transform.parent = col.transform;
 
-            col.gameObject.GetComponent<EnemyHealth>().DamageEnemy(characterDamage);
+            col.gameObject.GetComponent<EnemyHealth>().DamageEnemy();
             GameObject effect = Instantiate(damageEffect, transform.position, transform.rotation);
             Destroy(effect, 0.5f);
             Destroy(gameObject, 3f);
         }
         if (col.tag == "Dragon")
         {
-
-            col.gameObject.GetComponent<DragonHealth>().DamageEnemy(characterDamage);
+            col.gameObject.GetComponent<DragonHealth>().DamageEnemy();
             GameObject effect = Instantiate(damageEffect, transform.position, transform.rotation);
             Destroy(effect, 0.5f);
             Destroy(gameObject);
